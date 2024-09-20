@@ -30,10 +30,10 @@ burn(address _address, uint _teams)
 ```
 
 * Steps in Remix:
-  1. Paste the contract code into a new Solidity file.
-  2. Compile the contract.
-  3. Deploy it to a test network.
-  4. Use the mint or burn functions with appropriate parameters.
+1. Paste the contract code into a new Solidity file.
+2. Compile the contract.
+3. Deploy it to a test network.
+4. Use the mint or burn functions with appropriate parameters.
 
 
 ## Help
