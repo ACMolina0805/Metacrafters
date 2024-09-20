@@ -44,9 +44,8 @@ burn(address _address, uint _teams)
 
 ## Authors
 
-Contributors names and contact info
-
 Arjen Catherine P. Molina
+
 202111002@fit.edu.ph
 
 
