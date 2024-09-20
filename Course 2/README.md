@@ -19,15 +19,15 @@ My League is a Solidity contract designed to manage team counts in "Premier Voll
 
 * Deploy the smart contract to an Ethereum-compatible network.
 * Interact with the contract using the following functions:
+
+1. Adds teams to the specified address and updates the total team count.
 ```
 mint(address _address, uint _teams)
 ```
-Adds teams to the specified address and updates the total team count.
-
+2. Removes teams from the specified address, ensuring it has enough teams to burn.
 ```
 burn(address _address, uint _teams)
 ```
-Removes teams from the specified address, ensuring it has enough teams to burn.
 
 * Steps in Remix:
   1. Paste the contract code into a new Solidity file.
