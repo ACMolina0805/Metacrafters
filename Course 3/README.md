@@ -22,10 +22,13 @@ To interact with this contract, you need a Solidity-compatible environment like 
 ### Executing program
 
 * After deployment, you can call the gameStatus(uint teamA, uint teamB) function to check the current game status based on team scores.
+Example:
+```
+gameStatus(24, 24);
+```
+This will revert with the message: "Deuce: Game cannot finish yet." because both teams are tied at 24.
 * Call the isNegative() function to verify that the team scores are non-negative.
-```
-code blocks for commands
-```
+
 
 ## Help
 
