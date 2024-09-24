@@ -1,15 +1,13 @@
 # Volleyball Scoring System
 
-This is a Solidity-based smart contract that simulates a basic volleyball game scoring system. The contract checks the current status of a volleyball game based on the score and ensures the winning team meets the necessary conditions. It also includes an additional feature to prevent negative numbers from being stored as team scores.
-
+This smart contract simulates a basic volleyball scoring system using Solidity. It allows for tracking the score of two teams, determines the game status, and prevents adding points once the game is finished. It also includes checks for preventing negative scores.
 ## Description
 
-The Volleyball smart contract allows users to input scores for two teams (teamA and teamB) and checks the current game status based on standard volleyball scoring rules. Specifically, it checks:
-* If any team has reached 25 points.
-* If the game is tied at 24 (Deuce).
-* If one team has won the game by being ahead by at least 2 points.
-Additionally, the contract prevents negative scores by asserting that no team score is negative.
-
+The Volleyball smart contract is designed to manage and verify volleyball game rules based on team scores:
+* Point System: The contract tracks the points for two teams (teamA and teamB). Teams can gain points, but once a team reaches or exceeds 25 points, no more points can be added.
+* Game Status: The contract checks whether one of the teams has won by leading by at least 2 points, ensuring that if the game is tied at 24 (Deuce), the winning team must gain a 2-point lead.
+* Negative Score Prevention: The contract ensures that no negative scores are allowed for two placeholder variables team1 and team2.
+  
 ## Getting Started
 
 ### Installing
@@ -21,14 +19,17 @@ To interact with this contract, you need a Solidity-compatible environment like 
 
 ### Executing program
 
-* After deployment, you can call the gameStatus(uint teamA, uint teamB) function to check the current game status based on team scores.
+* After deployment, add points to teamA and teamB using the pointSystem(uint point1, uint point2) function.
 
 Example:
 ```
-gameStatus(24, 24);
+pointSystem(5, 3);
 ```
-This will revert with the message: "Deuce: Game cannot finish yet." because both teams are tied at 24.
+This will add 5 points to teamA and 3 points to teamB.
+Note: If a team reaches or exceeds 25 points, further points cannot be added, and the transaction will revert with the message "Cannot add more points! Game already finished."
 
+
+* Use the gameStatus() function to check if a team has won. It ensures that a team must lead by 2 points after a deuce (when both teams reach 24).
 * Call the isNegative() function to verify that the team scores are non-negative.
 
 
