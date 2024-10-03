@@ -173,7 +173,7 @@ export default function HomePage() {
   return (
     <main className="container">
       <header>
-        <h1>Welcome to the Volleyball Score Tracker!</h1>
+        <h1>Welcome to the Volleyball Game Tracker!</h1>
       </header>
       {initUser()}
       <style jsx>{`
