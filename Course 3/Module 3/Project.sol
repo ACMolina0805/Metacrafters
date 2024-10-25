@@ -9,6 +9,7 @@ contract VolleyToken is ERC20 {
     // Events for minting and burning points
     event PointsMinted(address indexed player, uint256 value);
     event PointsBurned(address indexed player, uint256 value);
+    event PointsTransferred(address indexed from, address indexed to, uint256 value);
 
     constructor(string memory name, string memory symbol) ERC20(name, symbol) {
         coach = msg.sender; // Set the deployer as the coach
@@ -35,6 +36,16 @@ contract VolleyToken is ERC20 {
 
         _burn(msg.sender, amount);
         emit PointsBurned(msg.sender, amount);
+        return true;
+    }
+
+    // Transfer points from the sender to another player
+    function transfer(address recipient, uint256 amount) public override returns (bool) {
+        require(recipient != address(0), "Cannot transfer to the zero address");
+        require(balanceOf(msg.sender) >= amount, "Insufficient points to transfer");
+
+        _transfer(msg.sender, recipient, amount);
+        emit PointsTransferred(msg.sender, recipient, amount);
         return true;
     }
 
