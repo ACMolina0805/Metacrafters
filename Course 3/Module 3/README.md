@@ -4,9 +4,9 @@ VolleyToken
 
 ## Description
 
-VolleyToken is an ERC20 token built using the OpenZeppelin library, designed to represent a points system for volleyball coaches and players. In this system, the coach can mint tokens (points) for players, representing their performance or progression 
-towards making the starting lineup. Players can transfer points to each other or burn points to simulate penalties or lost opportunities. The contract follows the ERC20 token standard and adds volleyball-themed functionality, such as the ability to mint and burn points 
-exclusively by the coach.
+VolleyToken is a smart contract built on the Ethereum blockchain using Solidity and the ERC20 token standard from OpenZeppelin. The system represents a volleyball team's point-based evaluation. The coach is the contract owner, and they have the exclusive right to mint new points (tokens) for players, reflecting their performance or contribution. Players can freely transfer points amongst themselves, representing teamwork and collaboration. They can also lose points, which could serve as penalties for in-game errors or poor performance.
+
+This contract leverages the ERC20 standard, incorporating functionalities like minting, transferring, burning, and balance checking. It emits events like PointsMinted, PointsBurned, and PointsTransferred to maintain an on-chain record of the most important actions in the contract.
 
 ## Getting Started
 
