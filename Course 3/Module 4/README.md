@@ -1,7 +1,3 @@
-Here’s the `README.md` file based on your template:
-
----
-
 # **Volleyball Draft System with DegenToken**
 
 ## **Overview**  
